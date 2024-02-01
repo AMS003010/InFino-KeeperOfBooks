@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Old English";   /*Can be any text*/
+    src: local("Old English"),
+      url("./fonts/OldeEnglish.ttf") format("truetype");
+  }
+
+@font-face {
+    font-family: "Subway";   /*Can be any text*/
+    src: local("Subway"),
+      url("./fonts/subway.ttf") format("truetype");
+  }
+
+@font-face {
+    font-family: "Quad Serif";   /*Can be any text*/
+    src: local("Quad Serif Line"),
+      url("./fonts/QuadSerifLine.ttf") format("truetype");
+  }

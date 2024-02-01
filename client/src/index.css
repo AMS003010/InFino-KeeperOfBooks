@@ -1,13 +1,225 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body,html {
+  margin: 0px;
+  padding: 0px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.pages {
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right,rgb(235, 232, 233),rgb(240, 233, 233));
+}
+
+.mainContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mainWrapper {
+  font-family: Quad Serif;
+  width: 20rem;
+  height: 20rem;
+  border: 3px solid  brown;
+  position: relative;
+  margin-top: 5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.mainHeading {
+  font-family: Quad Serif;
+  font-size: 6rem;
+  margin-bottom: 0;
+  margin-top: 5rem;
+}
+
+.mainsubHead {
+  font-family: Quad Serif;
+  font-size: 1rem;
+}
+
+.div1 {
+  position: absolute;
+  font-size: 2rem;
+  padding: 0.4rem;
+  width: 9rem;
+  height: 9rem;
+  border: 2px dashed black;
+  left: 0.5rem;
+  top: 0.5rem;
+  border-radius: 5px;
+  transform: scale(1);
+  transition: transform ease 0.5s;
+  background: linear-gradient(to right,rgb(235, 232, 233),rgb(230, 204, 204));
+}
+
+.div1:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.div2 {
+  position: absolute;
+  font-size: 1.2rem;
+  padding: 0.4rem;
+  width: 5rem;
+  height: 5rem;
+  border: 2px dashed black;
+  right: 0.5rem;
+  top: 0.5rem;
+  border-radius: 5px;
+  transform: scale(1);
+  transition: transform ease 0.5s;
+  background: linear-gradient(to right,rgb(235, 232, 233),rgb(230, 204, 204));
+}
+
+.div2:hover {
+  transform: scale(1.4);
+  cursor: pointer;
+}
+
+.div3 {
+  position: absolute;
+  font-size: 1.5rem;
+  padding: 0.4rem;
+  width: 7rem;
+  height: 7rem;
+  border: 2px dashed black;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  border-radius: 5px;
+  transform: scale(1);
+  transition: transform ease 0.5s;
+  background: linear-gradient(to right,rgb(235, 232, 233),rgb(230, 204, 204));
+}
+
+.div3:hover {
+  transform: scale(1.4);
+  cursor: pointer;
+}
+
+.div4 {
+  position: absolute;
+  padding: 0.4rem;
+  font-size: 1.6rem;
+  width: 6rem;
+  height: 6rem;
+  border: 2px dashed black;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  border-radius: 5px;
+  transform: scale(1);
+  transition: transform ease 0.5s;
+  background: linear-gradient(to right,rgb(235, 232, 233),rgb(232, 216, 216));
+}
+
+.div4:hover {
+  transform: scale(1.4);
+  cursor: pointer;
+}
+
+.div5 {
+  position: absolute;
+  width: 1rem;
+  height: 3rem;
+  font-size: 2.3rem;
+  left: 56%;
+}
+
+@keyframes flashColor1 {
+  0% {
+    color: rgb(238, 215, 215);
+  }
+  50% {
+    color: rgb(90, 68, 68); /* Change to the color you want during the flash */
+  }
+  100% {
+    color: rgb(155, 144, 144);
+  }
+}
+
+@keyframes flashColor2 {
+  0% {
+    color: rgb(155, 144, 144);
+  }
+  50% {
+    color: rgb(238, 215, 215); /* Change to the color you want during the flash */
+  }
+  100% {
+    color: rgb(90, 68, 68);
+  }
+}
+
+@keyframes flashColor3 {
+  0% {
+    color: rgb(90, 68, 68);
+  }
+  50% {
+    color: rgb(155, 144, 144); /* Change to the color you want during the flash */
+  }
+  100% {
+    color: rgb(238, 215, 215);
+  }
+}
+
+.div5 .dot1 {
+  color: rgb(123, 104, 104);
+  font-family: 'Courier New', Courier, monospace;
+  animation: flashColor1 1s infinite alternate;
+}
+
+.div5 .dot2 {
+  color: rgb(78, 58, 58);
+  font-family: 'Courier New', Courier, monospace;
+  animation: flashColor2 1s infinite alternate;
+}
+
+.div5 .dot3 {
+  color: rgb(148, 129, 129);
+  font-family: 'Courier New', Courier, monospace;
+  animation: flashColor3 1s infinite alternate;
+}
+
+.cardWrapper {
+  position: relative;
+  border: 4px solid black;
+  border-radius: 10px;
+  width: 20rem;
+  height: max-content;
+  background: linear-gradient(to right,rgb(247, 242, 242),rgb(242, 221, 221));
+  margin-bottom: 5rem;
+}
+
+.cardMainContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0.8rem;
+}
+
+.cardMainContainer .input1,.input2,.input3,.input4 {
+  width: 10rem;
+  height: 1.5rem;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  border-style: dashed;
+  margin-bottom: 0.2rem;
+}
+
+.actionButton {
+  border: 2px dashed #767676;
+  border-radius: 5px;
+  width: max-content;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  margin-top: 1rem;
+}
+
+.actionButton:hover {
+  border-style: solid;
+  border-color: black;
+  cursor: pointer;
 }
