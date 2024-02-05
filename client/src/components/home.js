@@ -11,7 +11,7 @@ const Home = () => {
     const cardList = [<NotBook />,<AddBook cardState={cardState} setCardState={setCardState}/>,<BorrowBook cardState={cardState} setCardState={setCardState}/>,<ReturnBook cardState={cardState} setCardState={setCardState}/>,<DeleteBook cardState={cardState} setCardState={setCardState}/>]
     return(
         <div className='mainContainer'>
-            <h1 className="mainHeading">Infini</h1>
+            <h1 className="mainHeading">Infino</h1>
             <h1 className="mainsubHead">keeper . of . the . books</h1>
             <div className="mainWrapper">
                 <div className="div1" onClick={() => setCardState(1)}>Add a book</div>
