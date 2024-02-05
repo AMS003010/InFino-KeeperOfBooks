@@ -1,17 +1,9 @@
 #!/bin/bash
 
-cd serverJs
+docker build -t serverjs ./serverJs
 
-docker build -t serverjs .
+docker build -t serverpython ./serverPython
 
-cd ../serverPython
-
-docker build -t serverpython .
-
-cd ../client
-
-docker build -t clientapp .
-
-cd ..
+docker build -t clientapp ./client
 
 docker-compose up
