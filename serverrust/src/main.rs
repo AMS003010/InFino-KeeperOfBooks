@@ -1,11 +1,17 @@
-#[macro_use] extern crate rocket;
+mod api;
+mod model;
+mod controller;
 
-#[get("/")]
-fn say_hello() -> &'static str {
-    "Hello from rust"
-}
+#[macro_use]
+extern crate rocket;
+
+use api::book_api::{get_all_books};
+use controller::mongodb_rep::MongoRep;
 
 #[launch]
 fn rocket() -> _ {
-    rocket::build().mount("/Rust/api",routes![say_hello])
+    let db = MongoRep::init();
+    rocket::build()
+        .manage(db)
+        .mount("/",routes![get_all_books])
 }
