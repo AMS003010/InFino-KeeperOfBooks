@@ -238,4 +238,19 @@ body,html {
 .madeWithLove span {
   font-family: Krakoan;
   letter-spacing: 0.2rem;
+  margin-right: 1rem;
+}
+
+.screwComp {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 9rem;
+  bottom: 1rem;
+}
+
+.screwComp img {
+  width: 1rem;
+  height: 1rem;
+  margin-bottom: 0.8rem;
 }

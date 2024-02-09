@@ -5,6 +5,7 @@ import ReturnBook from './returnBook';
 import DeleteBook from './deleteBook';
 import BorrowBook from './borrowBook';
 import NotBook from './nothBook';
+import screw from '../img/screw.png'
 
 const Home = () => {
     const [cardState,setCardState] = useState(0);
@@ -22,6 +23,11 @@ const Home = () => {
                     <div className="dot1">.</div>
                     <div className="dot2">.</div>
                     <div className="dot3">.</div>
+                </div>
+                <div className='screwComp'>
+                    <img src={screw} alt='s'/>
+                    <img src={screw} alt='s'/>
+                    <img src={screw} alt='s'/>
                 </div>  
             </div>
             <div className='cardWrapper'>{cardList[cardState]}</div>
