@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: serverpython-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: serverpython
+  template:
+    metadata:
+      labels:
+        app: serverpython
+    spec:
+      containers:
+      - name: serverpython-container
+        image: ams132/serverpython
+        ports:
+        - containerPort: 5000

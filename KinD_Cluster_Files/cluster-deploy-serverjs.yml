@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: serverjs-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: serverjs
+  template:
+    metadata:
+      labels:
+        app: serverjs
+    spec:
+      containers:
+      - name: serverjs-container
+        image: ams132/serverjs
+        ports:
+        - containerPort: 6000
