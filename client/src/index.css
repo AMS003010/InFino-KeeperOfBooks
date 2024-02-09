@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
 body,html {
   margin: 0px;
   padding: 0px;
+  background: linear-gradient(to right,rgb(235, 232, 233),rgb(240, 233, 233));
 }
 
 .pages {
   align-items: center;
   text-align: center;
-  background: linear-gradient(to right,rgb(235, 232, 233),rgb(240, 233, 233));
 }
 
 .mainContainer {
@@ -222,4 +224,18 @@ body,html {
   border-style: solid;
   border-color: black;
   cursor: pointer;
+}
+
+.madeWithLove {
+  font-family: Poor Story;
+  text-align: right;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1rem;
+  padding-right: 1.5rem;
+}
+
+.madeWithLove span {
+  font-family: Krakoan;
+  letter-spacing: 0.2rem;
 }

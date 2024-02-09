@@ -25,6 +25,7 @@ const Home = () => {
                 </div>  
             </div>
             <div className='cardWrapper'>{cardList[cardState]}</div>
+            <div className='madeWithLove'>made with ❣️ by &nbsp;<span>abhijith</span></div>
         </div>
     )
 }

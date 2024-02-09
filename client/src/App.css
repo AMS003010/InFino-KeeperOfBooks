@@ -15,3 +15,9 @@
     src: local("Quad Serif Line"),
       url("./fonts/QuadSerifLine.ttf") format("truetype");
   }
+
+@font-face {
+    font-family: "Krakoan";   /*Can be any text*/
+    src: local("Krakoan"),
+      url("./fonts/Krakoan.ttf") format("truetype");
+  }
