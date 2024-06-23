@@ -12,7 +12,7 @@ WORKDIR /app
 
 ENV FLASK_APP=app.py
 ENV FLASK_ENV=development
-ENV MONGO_URI=mongodb+srv://ams:juiceBox@cluster1.wgncmcb.mongodb.net/?retryWrites=true&w=majority
+ENV MONGO_URI=mongodb+srv://ams:JuiceBox@cluster0.tpgdder.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
 COPY --from=builder /root/.local /root/.local
 
