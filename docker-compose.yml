@@ -1,22 +1,23 @@
 version: '3'
 services:
   js_boi:
-    image: serverjs
+    build:
+      context: ./serverJs
     ports:
       - "6000:6000"
+    env_file:
+      - ./serverJs/.env
 
   python_boi:
-    image: serverpython
+    build:
+      context: ./serverPython
     ports:
       - "5000:5000"
+    env_file:
+      - ./serverPython/.env
 
   client_boi:
-    image: clientapp
+    build:
+      context: ./client
     ports:
       - "3000:3000"
-    depends_on:
-      - js_boi
-      - python_boi
-    environment:
-      - REACT_APP_JS_API_URL=http://js_boi:6000/Js/api
-      - REACT_APP_PYTHON_API_URL=http://python_boi:5000/Python/api
