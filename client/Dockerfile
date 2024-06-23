@@ -1,15 +1,23 @@
-FROM node:17-slim
+FROM node:alpine AS builder
 
-WORKDIR /user/src/app
+WORKDIR /app
 
-COPY ./package.json ./
-
-COPY ./package-lock.json ./
+COPY package.json package-lock.json ./
 
 RUN npm install
 
 COPY . .
 
+RUN npm run build
+
+FROM node:alpine
+
+WORKDIR /app
+
+COPY --from=builder /app /app
+
+RUN npm install
+
 EXPOSE 3000
 
-CMD ["npm","start"]
+CMD [ "npm","start" ]
